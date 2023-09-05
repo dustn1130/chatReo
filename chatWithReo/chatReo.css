@@ -1,0 +1,258 @@
+body {
+  background-color: #f5f5f5;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+position: relative;
+width: 390px;
+height: 796px;
+background-color: #fff;
+border-radius: 10px;
+box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.emphasizedText{
+color:#00AB81;
+}
+
+.Title {
+  position: absolute;
+  top: 56px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #000;
+  text-align: center;
+  font-family: Pretendard;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 35px;
+  /* 140% */
+  letter-spacing: -0.625px;
+}
+
+
+.chatReoMenuBtn{
+  position: absolute;
+  width: 77px;
+  height: 37px;
+  gap: 10px;
+  flex-shrink: 0;
+  border-radius: 25px;
+  border: 1.5px solid #1EC59C;
+  background: #FFF;
+  text-decoration-line: none;
+  top: 53px;
+  left: 294px;
+}
+
+.chatReoMenuBtnText{
+  position: absolute;
+  width: 51px;
+  height: 31px;
+  flex-shrink: 0;
+  color: #1EC59C;
+  font-family: Pretendard;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 380;
+  line-height: 24px;
+  /* 171.429% */
+  letter-spacing: -0.5px;
+  top: -8px;
+  left: 18px;
+}
+
+.chatReoMenuBtn:hover {
+  background: #DCFFF6;
+  transition: background-color 0.4s ease;
+}
+
+.chatReoBackBtn{
+  position: absolute;
+  top: 64px;
+  left: 32px;
+}
+
+.chatReoLine{
+  position: absolute;
+  top: 105px;
+  left: 0.1px;
+}
+
+.chattingContainer {
+position: absolute;
+width: 390px;
+height: 669px;
+background-color: #ffffff;
+border-bottom-left-radius: 10px;
+border-bottom-right-radius: 10px;
+box-shadow: 0 2px 10px rgba(0, 0, 0, 0);
+bottom:0px;
+}
+
+.chatReoLine2{
+position: absolute;
+bottom: 65px;
+}
+
+.chatReoChattingTextSpace{
+position: absolute;
+width: 276px;
+height: 51px;
+font-size: 15px;
+word-break: break-all;
+border: none;
+background: transparent;
+bottom: 7px;
+left: 5px;
+}
+
+.chatReoChattingBtn{
+position: absolute;
+border: none;
+background: #1EC59C;
+font-family: Pretendard;
+color:#FFF;
+border-bottom-right-radius:10px;
+font-size:20px;
+font-weight:700;
+height: 67px;
+width: 100px;
+bottom: 0px;
+right: 0px;
+}
+
+#nickName{
+position: absolute;
+border: none;
+background: #ff33;
+top: -30px;
+left: 15px;
+width: 80px;
+}
+
+.displayContainer{
+position: absolute;
+width: 390px;
+height: 603px;
+background-color: #ffffff;
+box-shadow: 0 2px 10px rgba(0, 0, 0, 0);
+top:0px;
+overflow-y:scroll;
+}
+
+.displayContainer::-webkit-scrollbar{
+display:none;
+}
+
+/*userChattingBox랑 gptChattingBox랑 절대 바꾸지 말것.*/
+.userChattingBox {
+display: flex;
+flex-direction: column;
+align-items: flex-end;
+background: #fff;
+}
+
+.gptChattingBox {
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+background: #fff;
+}
+
+.gptProfilePosition {
+position: relative;
+height: 0px;
+top: 13px;
+left: 10px;
+}
+
+.userChattingText {
+border-radius: 10px;
+padding: 10px 23px;
+margin: 7px;
+max-width: 80%; /* Optional: Limit the width of the bubble */
+border-radius: 25px 0px 25px 25px;
+background: #1EC59C;
+color: #FFF;
+font-family: Pretendard;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 24px; /* 171.429% */
+}
+
+.gptChattingText {
+border-radius: 10px;
+padding: 10px 23px;
+margin: 7px 55px;
+max-width: 80%; /* Optional: Limit the width of the bubble */
+border-radius: 25px 25px 25px 0px;
+background: #F2F2F2;
+color: #656565;
+font-family: Pretendard;
+font-size: 13px;
+font-style: normal;
+font-weight: 450;
+line-height: 24px; /* 171.429% */
+}
+
+.gptChattingHr{
+border-top-left-radius: 0%;
+border-bottom: 0px;
+border-top:1px solid #E1E1e1;
+}
+
+.gptOptionBtns{
+font-family: Pretendard;
+background:#FFF;
+border-radius: 25px;
+border: 1.5px solid;
+border-color:#656565;
+color:#656565;
+border-width:2px;
+padding: 10px 20px 10px 20px;
+margin:3px;
+}
+.gptOptionBtns:hover{
+border-color:#1EC59C;
+color:#00AB81
+}
+
+.hidden{
+display:none;
+}
+/*
+input::placeholder{
+color: #A1A1A1;
+font-family: Pretendard;
+font-size: 13px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+letter-spacing: 1px;
+}
+*/
+
+#chattingName{
+color:#000;
+position:relative;
+text-align: center;
+font-family: Pretendard;
+font-size:25px;
+font-weight: 700;
+top:61px;
+left:115px;
+width:160px;
+border:none;
+background:transparent;
+}
+
+
+
