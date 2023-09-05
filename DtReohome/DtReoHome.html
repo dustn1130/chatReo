@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr.Reo</title>
+    <link rel="stylesheet" href="DtReoHome.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="top">
+            <img src="DtReoHomeImg/DtReoHomeBigFoot.svg" alt="큰발바닥아이콘" class="DtReoHomeBigFoot">
+            <img src="DtReoHomeImg/chatReoLine.svg" class="hospRecomLine" alt="">
+        </div>
+
+        <div class="center">
+            <div class="text1">무엇이<br>궁금하세요?</div>
+            <div class="text2">AI기반으로 자세한 답변을<br>들려드릴 수 있어요</div>
+            <img src="DtReoHomeImg/robot_gif.gif" alt="이미지" class="robot_gif">
+            <img src="DtReoHomeImg/shadow.svg" alt="이미지" class="shadow">
+        </div>
+
+        <div class="box">
+            <button class="ChatWithReoBox" onclick="location.href='../chatWithReo/chatwithReo.html'">
+                <img class="ChattingIcon" src="DtReoHomeImg/DtReoHomeChattingIcon.svg" alt="아이콘">
+                <h1 class="BTNBigText">AI 대화</h1>
+                <h1 class="BTNSmallText">Dr.Reo 에게 진단받기</h1>
+            </button>
+
+            <button class="HospRecomBox" onclick="redirectTo('HospRecomBox')">
+                <img class="RecomIcon" src="DtReoHomeImg/dictionary.svg" alt="아이콘">
+                <h1 class="BTNBigText">멍냥 백과</h1>
+                <h1 class="BTNSmallText">우리 아이 더 알아보기</h1>
+            </button>
+
+            <button class="DiagLogBox" onclick="location.href='../DiagLog/DiagLog.html'">
+                <img class="DiagLogIcon" src="DtReoHomeImg/DtReoDiagLogIcon.svg" alt="아이콘">
+                <h1 class="BTNBigText">진단 기록</h1>
+                <h1 class="BTNSmallText">진단 기록 한눈에 보기</h1>
+            </button>
+
+            <button class="ChatListBox" onclick="location.href='../chatList/chatList.html'">
+                <img class="ChatListIcon" src="DtReoHomeImg/DtReoChattingListIcon.svg" alt="아이콘">
+                <h1 class="BTNBigText">대화 목록</h1>
+                <h1 class="BTNSmallText">질문 기록 한눈에 보기</h1>
+            </button>
+        </div>
+
+        <div class="bottom">Dr.Reo</div>
+    </div>
+
+    <script>
+        function redirectTo(page) {
+            if (page === 'HospRecomBox') {
+                window.location.href = '/model';  // '/model' 경로로 변경
+            }
+        }
+    </script>
+</body>
+
+</html>
