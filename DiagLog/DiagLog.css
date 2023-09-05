@@ -1,0 +1,520 @@
+body {
+  background-color: #f5f5f5;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  position: relative;
+  width: 390px;
+  height: 796px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.displayContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  width: 390px;
+  height: 689px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0);
+  bottom: 0px;
+  overflow: auto;
+}
+
+.displayContainer::-webkit-scrollbar {
+  display: none;
+}
+
+.DiagLogLine {
+  position: absolute;
+  top: 105px;
+}
+
+.DiagLogTitle {
+  position: absolute;
+  top: 56px;
+  left: 158px;
+  color: #000;
+  text-align: center;
+  font-family: Pretendard;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 35px;
+  /* 140% */
+  letter-spacing: -0.625px;
+}
+
+.DiagLogBackBtn {
+  position: absolute;
+  top: 64px;
+  left: 32px;
+}
+
+.DiagLogContainer {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+}
+
+.DiagLogBox {
+  position: relative;
+  top: 10px;
+  width: 356px;
+  height: 186px;
+  border-radius: 16px;
+  background: #FFF;
+  border-radius: 25px;
+  border: 1.3px solid #1EC59C;
+  box-shadow: 1px 2px 7px 0px rgba(0, 0, 0, 0.13);
+  margin: 7px 17px 7px 17px;
+}
+
+.DiagLogBox1 {
+  position: relative;
+  top: 10px;
+  width: 356px;
+  height: 186px;
+  border-radius: 16px;
+  background: #FFF;
+  border-radius: 25px;
+  border: 1.3px solid #1EC59C;
+  box-shadow: 1px 2px 7px 0px rgba(0, 0, 0, 0.13);
+  margin: 7px 17px 7px 17px;
+}
+
+.DiagLogBox2 {
+  position: relative;
+  top: 10px;
+  width: 356px;
+  height: 186px;
+  border-radius: 16px;
+  background: #FFF;
+  border-radius: 25px;
+  border: 1.3px solid #1EC59C;
+  box-shadow: 1px 2px 7px 0px rgba(0, 0, 0, 0.13);
+  margin: 7px 17px 7px 17px;
+}
+
+.DiagLogContentImg {
+  position: relative;
+  left: -100px;
+  top: 30px;
+  width: 116px;
+  height: 116px;
+  border-radius: 100px 100px 100px 100px;
+}
+
+.DiagLogBoxTitle {
+  position: relative;
+  top: -80px;
+  left: 10px;
+  color: #000;
+  font-family: Pretendard;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.DiagLogAnswer {
+  position: relative;
+  text-align: center;
+  text-justify: auto;
+  left: 144px;
+  top: -73px;
+  width: 80px;
+  padding-top: 7px;
+  height: 25px;
+  border-radius: 20px;
+  background: cornflowerblue;
+  color: #FFF;
+  font-family: Pretendard;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 550;
+  line-height: normal;
+}
+
+.DiagLogBox.pending .DiagLogAnswer {
+  background: #C6C8CA;
+  /* 변경될 색상 */
+  color: #fff;
+  /* 변경될 텍스트 색상 */
+  pointer-events: none;
+}
+
+.DiagLogAnswer2 {
+  position: relative;
+  text-align: center;
+  text-justify: auto;
+  left: 144px;
+  top: -73px;
+  width: 80px;
+  padding-top: 7px;
+  height: 25px;
+  border-radius: 20px;
+  background: #1EC59C;
+  color: #FFF;
+  font-family: Pretendard;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 550;
+  line-height: normal;
+}
+
+.DiagLogAnswerWating {
+  position: relative;
+  text-align: center;
+  text-justify: auto;
+  left: 144px;
+  top: -73px;
+  width: 80px;
+  padding-top: 7px;
+  height: 25px;
+  border-radius: 20px;
+  background: #C6C8CA;
+  color: #474747;
+  font-family: Pretendard;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 550;
+  line-height: normal;
+}
+
+.DiagLogAnswerCanRequest {
+  position: relative;
+  text-align: center;
+  text-justify: auto;
+  left: 144px;
+  top: -73px;
+  width: 80px;
+  padding-top: 7px;
+  height: 25px;
+  border-radius: 20px;
+  background: cornflowerblue;
+  color: #fff;
+  font-family: Pretendard;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 550;
+  line-height: normal;
+}
+
+.DiagLogDate {
+  text-align: start;
+  position: relative;
+  left: 146px;
+  top: -30.5px;
+  color: #656565;
+  font-family: Pretendard;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.DiagLogPart {
+  text-align: start;
+  position: relative;
+  left: 146px;
+  top: -85px;
+  color: #656565;
+  font-family: Pretendard;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.DiagLogResult {
+  text-align: start;
+  position: relative;
+  left: 146px;
+  top: -83px;
+  color: #656565;
+  font-family: Pretendard;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.DiagLogDetailBox {
+  border-radius: 16px;
+  background: #F1FDFA;
+  box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.20);
+  margin: 7px 17px 7px 17px;
+  border: none;
+}
+
+.DiagLogDetailBoxBox1 {
+  width: 326px;
+  height: 186px;
+  border-radius: 16px;
+  background: #c5ff26;
+  margin: 17px;
+  border: none;
+}
+
+.DiagLogDetailBoxBox2 {
+  border-radius: 16px;
+  background: #fff;
+  font-family: Pretendard;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin: 17px;
+  padding: 20px;
+  border: none;
+}
+
+.DiagLogDetailBoxBox3face {
+  display: flex;
+  flex-direction: column;
+  border-radius: 16px;
+  background: #009470;
+  color: #FFF;
+  font-family: Pretendard;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin: 17px;
+  padding: 10px;
+  border: none;
+}
+
+.DiagLogDetailBoxBox4Content {
+  border-radius: 16px;
+  background-color: #fff;
+  color: black;
+  font-family: Pretendard;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  padding: 10px;
+  border: none;
+}
+
+.DiagLogDetailImg {
+  position: relative;
+  top: 32.5px;
+  width: 116px;
+  height: 116px;
+  border-radius: 100px;
+}
+
+.DiagLogBox:hover {
+  background: #DCFFF6;
+  transition: background-color 0.4s ease;
+}
+
+.DiagLogBox1:hover {
+  background: #DCFFF6;
+  transition: background-color 0.4s ease;
+}
+
+.DiagLogBox2:hover {
+  background: #DCFFF6;
+  transition: background-color 0.4s ease;
+}
+
+.popupContainer {
+  position: relative;
+  width: 390px;
+  height: 796px;
+  background-color: #fff;
+  border-radius: 10px;
+
+}
+
+.popupContent {
+  position: relative;
+  top: 124px;
+  width: 355px;
+  height: 630px;
+  border-radius: 16px;
+  background: #FFF;
+  border-radius: 25px;
+  border: 1.3px solid #1EC59C;
+  box-shadow: 1px 2px 7px 0px rgba(0, 0, 0, 0.13);
+  margin: 7px 17px 7px 17px;
+  margin-top: 0;
+
+}
+
+.closePopup {
+  position: absolute;
+  top: 40px;
+  right: 32px;
+  font-size: 40px;
+  cursor: pointer;
+}
+
+.DiagLogTitle2 {
+  position: absolute;
+  top: 56px;
+  left: 158px;
+  color: #000;
+  text-align: center;
+  font-family: Pretendard;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 35px;
+  /* 140% */
+  letter-spacing: -0.625px;
+  z-index: 9999;
+  /* 타이틀이 다른 요소 위에 나타나도록 설정 */
+}
+
+.DiagLogLine2 {
+  position: absolute;
+  top: 105px;
+  z-index: 9998;
+  /* 라인 이미지가 다른 요소 위에 나타나도록 설정 */
+}
+
+.DiagLogBoxTitle3 {
+  position: relative;
+  top: -80px;
+  left: 150.5px;
+  color: #000;
+  font-family: Pretendard;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.DiagLogAnswer3 {
+  position: relative;
+  text-align: center;
+  text-justify: auto;
+  left: 150px;
+  top: -72.5px;
+  width: 80px;
+  padding-top: 7px;
+  height: 25px;
+  border-radius: 20px;
+  background: #1EC59C;
+  color: #FFF;
+  font-family: Pretendard;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 550;
+  line-height: normal;
+}
+
+.DiagLogContentImg3 {
+  position: relative;
+  left: 19.5px;
+  top: 31px;
+  width: 116px;
+  height: 116px;
+  border-radius: 100px 100px 100px 100px;
+}
+
+.DiagLogDate3 {
+  text-align: start;
+  position: relative;
+  left: 150px;
+  top: -30.5px;
+  color: #656565;
+  font-family: Pretendard;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.DiagLogPart3 {
+  text-align: start;
+  position: relative;
+  left: 152px;
+  top: -84.5px;
+  color: #656565;
+  font-family: Pretendard;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.DiagLogResult3 {
+  text-align: start;
+  position: relative;
+  left: 152px;
+  top: -82.5px;
+  color: #656565;
+  font-family: Pretendard;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.log {
+  position: relative;
+  left: 20px;
+  top: -70px;
+  width: 317px;
+  height: 186px;
+  flex-shrink: 0;
+  border-radius: 16px;
+  background: #F2F2F2;
+}
+
+.mainlog {
+  position: relative;
+  top: 8px;
+  left: 20px;
+  color: #000;
+  font-family: Pretendard;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  /* 150% */
+}
+
+.solution {
+  position: relative;
+  top: 18px;
+}
+
+.solutionbox {
+  position: relative;
+  top: -115px;
+  left: 16px;
+  width: 285px;
+  height: 118px;
+  flex-shrink: 0;
+  border-radius: 16px;
+  background: #F2F2F2;
+}
+
+.solutiontext {
+  position: relative;
+  top: 10px;
+  left: 14px;
+  color: #000;
+  font-family: Pretendard;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  /* 150% */
+}

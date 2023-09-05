@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr.Reo</title>
+    <link rel="stylesheet" href="DiagLog.css">
+</head>
+
+<body>
+    <div class="container">
+        <a href="../DtReohome/DtReoHome.html" class="DiagLogBackBtn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="21" height="19" viewBox="0 0 21 19" fill="none"
+                alt="backBtn">
+                <path
+                    d="M19.6523 8.3273H4.59891L11.1755 2.26145C11.7011 1.77668 11.7011 0.981161 11.1755 0.496391C10.6499 0.0116198 9.8009 0.0116198 9.27531 0.496391L0.394192 8.68777C-0.131397 9.17255 -0.131397 9.95564 0.394192 10.4404L9.27531 18.6318C9.8009 19.1166 10.6499 19.1166 11.1755 18.6318C11.7011 18.147 11.7011 17.3639 11.1755 16.8792L4.59891 10.8133H19.6523C20.3936 10.8133 21 10.254 21 9.57031C21 8.88665 20.3936 8.3273 19.6523 8.3273Z"
+                    fill="black" />
+            </svg>
+        </a>
+
+        <img src="DiagLogImg/chatReoLine.svg" class="DiagLogLine" alt="">
+
+        <div class="DiagLogTitle">진단 기록</div>
+
+        <div class="displayContainer">
+            <div class="DiagLogContainer">
+                <button class="DiagLogBox">
+                    <img src="DiagLogImg/eye.svg" class="DiagLogContentImg"></img>
+                    <div class="DiagLogBoxTitle">안구 이상</div>
+                    <div class="DiagLogAnswer">상담 신청</div>
+                    <div class="DiagLogDate"><br></div>
+                    <div class="DiagLogPart">부위: 안구</div>
+                    <div class="DiagLogResult">날짜: 08월 28일</div>
+                </button>
+            </div>
+
+            <div class="DiagLogContainer">
+                <button class="DiagLogBox">
+                    <img src="DiagLogImg/guto.svg" class="DiagLogContentImg"></img>
+                    <div class="DiagLogBoxTitle">소화 이상</div>
+                    <div class="DiagLogAnswer">상담 신청</div>
+                    <div class="DiagLogDate"><br></div>
+                    <div class="DiagLogPart">부위: 위장</div>
+                    <div class="DiagLogResult">날짜: 08월 28일</div>
+                </button>
+            </div>
+
+            <div class="DiagLogContainer">
+                <button class="DiagLogBox1">
+                    <img src="DiagLogImg/redgum.svg" class="DiagLogContentImg"></img>
+                    <div class="DiagLogBoxTitle">구강 이상</div>
+                    <div class="DiagLogAnswer2">답변 완료</div>
+                    <div class="DiagLogDate"><br></div>
+                    <div class="DiagLogPart">부위: 잇몸</div>
+                    <div class="DiagLogResult">날짜: 08월 24일</div>
+                </button>
+            </div>
+
+            <div class="DiagLogContainer">
+                <button class="DiagLogBox2">
+                    <img src="DiagLogImg/blackgum.svg" class="DiagLogContentImg"></img>
+                    <div class="DiagLogBoxTitle">구강 이상</div>
+                    <div class="DiagLogAnswer2">답변 완료</div>
+                    <div class="DiagLogDate"><br></div>
+                    <div class="DiagLogPart">부위: 잇몸</div>
+                    <div class="DiagLogResult">날짜: 08월 23일</div>
+                </button>
+            </div>
+        </div>
+
+        <!-- 팝업 컨테이너 -->
+        <div id="popupContainer" class="popupContainer" style="display: none;">
+            <span class="closePopup" id="closePopup">&times;</span>
+            <div class="DiagLogTitle2">진단 기록</div>
+            <img src="DiagLogImg/chatReoLine.svg" class="DiagLogLine2" alt="">
+            <div class="popupContent">
+                <img src="DiagLogImg/redgum.svg" class="DiagLogContentImg3"></img>
+                <div class="DiagLogBoxTitle3">구강 이상</div>
+                <div class="DiagLogAnswer3">답변 완료</div>
+                <div class="DiagLogDate"><br></div>
+                <div class="DiagLogPart3">부위: 잇몸</div>
+                <div class="DiagLogResult3">날짜: 08월 23일</div>
+                <div class="log">
+                    <div class="mainlog">
+                        종: 고양이<br>
+                        품종: 코리안숏츠헤어<br>
+                        성별: 남아<br>
+                        생년월일: 21년 10월 10일<br>
+                        과거 병력: 만성신부전<br>
+                        의심 질병: 치은염<br>
+                        솔루션: GPT가 응답한 내용 기록
+                    </div>
+                    <div class="solution">
+                        <img src="DiagLogImg/solution.svg" class="solution" alt="">
+                        <div class="solutionbox">
+                            <div class="solutiontext">
+                                GPT의 답변을 바탕으로 전문가 솔루션을<br>
+                                제공해 줍니다.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p id="popupContentPlaceholder"></p>
+            </div>
+        </div>
+    </div>
+    <!--<script src="DiagLog.js"></script>-->
+    <script>
+        const buttons = document.querySelectorAll(".DiagLogBox");
+        buttons.forEach(button => {
+            button.addEventListener("click", () => {
+                if (!button.classList.contains("pending")) {
+                    button.classList.add("pending");
+                    button.querySelector(".DiagLogAnswer").textContent = "답변 대기";
+                }
+            });
+        });
+
+        // 각 구강 이상 박스에 클릭 이벤트 추가
+        const diagLogBoxes = document.querySelectorAll(".DiagLogBox1, .DiagLogBox2");
+        diagLogBoxes.forEach(box => {
+            box.addEventListener("click", () => {
+                const answerElement = box.querySelector(".DiagLogAnswer2");
+                if (answerElement && answerElement.textContent === "답변 완료") {
+                    // const answerContent = answerElement.textContent;
+                    // openPopup(answerContent);
+                    openPopup(""); // 팝업을 열지 않음
+                }
+            });
+        });
+
+        // 팝업 열기
+        function openPopup(content) {
+            const popupContentPlaceholder = document.getElementById("popupContentPlaceholder");
+            popupContentPlaceholder.textContent = content;
+
+            const popupContainer = document.getElementById("popupContainer");
+            popupContainer.style.display = "block";
+
+            // Disable scrolling on the background content when the popup is open
+            document.body.style.overflow = "hidden";
+        }
+
+        // 팝업 닫기
+        function closePopup() {
+            const popupContainer = document.getElementById("popupContainer");
+            popupContainer.style.display = "none";
+
+            // Enable scrolling on the background content when the popup is closed
+            document.body.style.overflow = "auto";
+        }
+
+        // 팝업 닫기 버튼에 클릭 이벤트 추가
+        const closePopupButton = document.getElementById("closePopup");
+        closePopupButton.addEventListener("click", closePopup);
+    </script>
+</body>
+
+</html>
