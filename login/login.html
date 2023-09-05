@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr.Reo</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+    <div class="container">
+        <img src="loginimage/mainlogo.svg" alt="이미지" class="mainlogo">
+
+        <div class="center">
+            <div class="emailtext">이메일</div>
+            <div class="email input">
+                <h3>
+                    <label for="email_input"></label>
+                    <input type="text" id="email_input" placeholder="Email" oninput="handleInputChange(this)" />
+                </h3>
+            </div>
+
+            <div class="nametext">이름</div>
+            <div class="name input">
+                <h3>
+                    <label for="name_input"></label>
+                    <input type="text" id="name_input" placeholder="Name" oninput="handleInputChange(this)" />
+                </h3>
+            </div>
+        </div>
+
+        <button class="startbox" onclick="location.href='../DtReohome/DtReohome.html'">
+            <img class="start" src="loginimage/start.svg" alt="이미지">
+        </button>
+
+    </div>
+</body>
+
+</html>
