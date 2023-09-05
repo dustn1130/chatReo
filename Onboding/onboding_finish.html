@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dr.Reo</title>
+  <link rel="stylesheet" href="onboding.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+  
+  <div class="container">
+    <div class="intro-section">
+      <img src="onbodingimage/mainlogo.svg" class="mainlogo">
+    </div>
+    
+    <div class="other-sections" style="display: none;">
+      <div>
+        <div class="wrapper">
+          <div class="inner">
+            <h1 class="h1">안녕하세요?<br>
+              AI 닥터 레오에요. 반가워요!
+            </h1>
+            <img src="onbodingimage/robot_gif.gif" alt="이미지" class="robot_gif_1">
+            <img src="onbodingimage/shadow.svg" alt="이미지" class="shadow">
+          </d>
+          <div class="inner"></div>
+            <h2 class="h2">대화를 통해 아이의<br>
+              건강을 확인 할 수 있어요.
+            </h2>
+            <p class="p1">정확한 증상 진단을 위한<br>이미지 분석 기능</p>
+            <div class="video-container-1">
+              <video src="onbodingimage/video1.mp4" class="video" autoplay loop muted></video>
+            </div>
+          </div>
+          <div class="inner">
+            <h2 class="h2_3">진단 결과를 확인하고<br>
+              전문가의 상담까지 받아보세요.
+            </h2>
+            <p class="p2">미흡한 정보를 보충해주는<br>전문가 솔루션 답변</p>
+            <div class="video-container-2">
+              <video src="onbodingimage/video2.mp4" class="video" autoplay loop muted></video>
+            </div>
+          </div>
+          <div class="inner">
+            <h3 class="h3">그동안 했던 대화들을<br>
+            일자 별로 정리해드려요.
+            </h3>
+            <p class="p3">질문/대화를 한눈에 볼 수 있는<br>대화 목록 기능</p>
+            <div class="video-container-3">
+              <video src="onbodingimage/video3.mp4" class="video" autoplay loop muted></video>
+            </div>
+          </div>
+          <div class="inner">
+            <h4 class="h4">소중한 나의 아이에 대한<br>
+            다양한 정보를 제공해드려요.
+            </h4>
+            <p class="p4">100여가지의 품종별 데이터를 통한<br>강아지, 고양이 백과사전 제공</p>
+            <div class="video-container-4">
+              <video src="onbodingimage/video4.mp4" class="video" autoplay loop muted></video>
+            </div>
+            <div>
+              <a href="../login/login.html">
+                <img src="onbodingimage/startbox.svg" alt="이미지" class="startbox">
+                <img src="onbodingimage/start_h1.svg" alt="이미지" class="start_h1">
+              </a>
+            </div>
+          </div>
+        </div>
+  
+        <div>
+          <button class="next">
+            <img src="onbodingimage/right_page_button.svg" alt="이미지" class="right_button">
+          </button>
+          <button class="past"> 
+            <img src="onbodingimage/left_page_button.svg" alt="이미지" class="left_button">
+          </button>
+        </div>
+
+        <div>
+          <ul class="dots-wrapper">
+            <li class="dots" active></li>
+            <li class="dots"></li>
+            <li class="dots"></li>
+            <li class="dots"></li>
+            <li class="dots"></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script>
+    $(document).ready(function() {
+      const dots = $(".dots-wrapper .dots");
+      const dotImages = [
+        "url(onbodingimage/page_bar.svg)",
+        "url(onbodingimage/page_bar.svg)",
+        "url(onbodingimage/page_bar.svg)",
+        "url(onbodingimage/page_bar.svg)",
+        "url(onbodingimage/page_bar.svg)"
+      ];
+
+      let currentPage = 1;
+      const maxPage = 5;
+
+      function updateDots() {
+        dots.each(function(index) {
+          if (index === currentPage - 1) {
+            $(this).addClass("active").css("background-image", dotImages[currentPage - 1]);
+          } else {
+            $(this).removeClass("active").css("background-image", "");
+          }
+        });
+      }
+
+      function goToPage(pageNumber) {
+        currentPage = pageNumber;
+        $(".wrapper").css("transform", `translateX(-${(currentPage - 1) * 390}px)`);
+        updateDots();
+        updateButtonsAndStartbox();
+      }
+
+      function updateButtonsAndStartbox() {
+        if (currentPage === 1) {
+          $(".past").hide(); // 1페이지에서는 이전 버튼을 숨깁니다.
+          $(".next").show();
+          $(".startbox, .start_h1").fadeOut();
+        } else if (currentPage === maxPage) {
+          $(".past").show();
+          $(".next").hide();
+          $(".startbox, .start_h1").fadeIn(1000);
+        } else {
+          $(".past").show();
+          $(".next").show();
+          $(".startbox, .start_h1").fadeOut();
+        }
+      }
+
+      $(".next").click(function() {
+        currentPage = (currentPage % maxPage) + 1;
+        goToPage(currentPage);
+      });
+
+      $(".past").click(function() {
+        currentPage = ((currentPage - 2 + maxPage) % maxPage) + 1;
+        goToPage(currentPage);
+      });
+
+      // intro-section이 3초 동안 나타난 후 서서히 사라짐
+      $(".intro-section").delay(1000).fadeOut(500, function() {
+        // 나머지 부분이 나타난 후 1초 후에 슬라이드 네비게이션 및 이전/다음 버튼을 표시
+        $(".other-sections").fadeIn(500, function() {
+          $(".dots-wrapper, .next").show();
+        });
+      });
+
+      updateDots();
+      goToPage(currentPage);
+    });
+  </script>
+</body>
+</html>

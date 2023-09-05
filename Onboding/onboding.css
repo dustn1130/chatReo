@@ -1,0 +1,349 @@
+body {
+    background-color: #F5F5F5;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden; /* 이미지 이외의 내용 숨기기 */
+}
+
+.container {
+    position: relative;
+    width: 390px;
+    height: 796px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);  
+    overflow: hidden;
+}
+
+.wrapper {
+    position: absolute;
+    width: 390px;  
+    transition: transform 0.5s ease; /* 움직임에 애니메이션 효과 추가 */
+}
+    
+.inner {
+    float: left;
+    width: 390px;
+    height: 796px;
+}
+
+.video-container-1 {
+    width: 260px;
+    height: 500px;
+    flex-shrink: 0;
+    position: relative;
+    top: -700px;
+    left: 456px;
+    background-color: #000; /* 배경색을 검정색으로 설정 */
+    overflow: hidden; /* 영상 외부 영역을 숨김 */
+}
+
+.video-container-2 {
+    width: 260px;
+    height: 500px;
+    flex-shrink: 0;
+    position: relative;
+    top: -720px;
+    left: 847px;
+    background-color: #000; /* 배경색을 검정색으로 설정 */
+    overflow: hidden; /* 영상 외부 영역을 숨김 */
+}
+
+.video-container-3 {
+    width: 260px;
+    height: 500px;
+    flex-shrink: 0;
+    position: relative;
+    top: -1520px;
+    left: 1235px;
+    background-color: #000; /* 배경색을 검정색으로 설정 */
+    overflow: hidden; /* 영상 외부 영역을 숨김 */
+}
+
+.video-container-4 {
+    width: 260px;
+    height: 500px;
+    flex-shrink: 0;
+    position: relative;
+    top: -2370px;
+    left: 1625px;
+    background-color: #000; /* 배경색을 검정색으로 설정 */
+    overflow: hidden; /* 영상 외부 영역을 숨김 */
+}
+
+.mainlogo {
+    width: 199px;
+    height: 206px;
+    flex-shrink: 0;
+    position: absolute;
+    top: 285px;
+    left: 95px;
+}
+
+.robot_gif_1 {
+    width: 580px;
+    height: 480px;
+    flex-shrink: 0;
+    position: absolute;
+    top: 256px;
+    left: -120px;
+}
+
+.robot2 {
+    width: 274px;
+    height: 274px;
+    flex-shrink: 0;
+    position: absolute;
+    top: 414px;
+    left: 448px;
+}
+
+.video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.robot4 {
+    width: 274px;
+    height: 274px;
+    flex-shrink: 0;
+    position: absolute;
+    top: 414px;
+    left: 1228px;
+}
+
+.robot5 {
+    width: 274px;
+    height: 274px;
+    flex-shrink: 0;
+    position: absolute;
+    top: 414px;
+    left: 1228px;
+}
+
+.robot6 {
+    width: 274px;
+    height: 274px;
+    flex-shrink: 0;
+    position: absolute;
+    bottom: 2500px;
+    left: 1616px;
+}
+
+.shadow {
+    width: 148px;
+    height: 100px;
+    flex-shrink: 0;
+    position: absolute;
+    top:620px;
+    left: 120px;
+}
+
+.startbox {
+    width: 390px;
+    height: 102px;
+    flex-shrink: 0;
+    position: absolute;
+    bottom: 2384px;
+    left: 1560px;
+}
+
+.start_h1 {
+    width: 102px;
+    height: 26px;
+    flex-shrink: 0;
+    position: absolute;
+    bottom: 2420px;
+    left: 1700px;
+}
+
+/* 온보딩 화면 1 굵은 글씨 */
+.h1 {
+    color: #000;
+    text-align: center;
+    font-family: Pretendard;
+    font-size: 29px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 37px;
+    letter-spacing: -0.725px;
+    position: absolute; 
+    top: 130px; 
+    left:48px;
+}
+
+/* 온보딩 화면 2 작은 글씨 */
+.p1 {
+    color: #A1A1A1;
+    text-align: center;
+    font-family: Pretendard;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 26px; /* 130% */
+    letter-spacing: -0.5px;
+    position: relative; 
+    top: -703px;
+    left: 390px;
+}
+
+/* 온보딩 화면 2 글씨 */
+.h2 {
+    position: relative;
+    text-align: center;
+    font-family: Pretendard;
+    font-size: 29px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 37px; /* 127.586% */
+    letter-spacing: -0.725px;
+    top: -685px; 
+    left: 388px;
+}
+
+/* 온보딩 화면 3 글씨 */
+.h2_3 {
+    position: relative;
+    color: #000;
+    text-align: center;
+    font-family: Pretendard;
+    font-size: 29px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 37px; /* 127.586% */
+    letter-spacing: -0.725px;
+    top: -710px; 
+    left: 780px;
+}
+
+/* 온보딩 화면 2 작은 글씨 */
+.p2 {
+    color: #A1A1A1;
+    text-align: center;
+    font-family: Pretendard;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 26px; /* 130% */
+    letter-spacing: -0.5px;
+    position: relative; 
+    top: -728px;
+    left: 785px;
+}
+
+/* 온보딩 화면 4 굵은 글씨 */
+.h3 {
+    color: #000;
+    text-align: center;
+    font-family: Pretendard;
+    font-size: 29px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 37px; /* 127.586% */
+    letter-spacing: -0.725px;
+    position: relative; 
+    top: -1510px; 
+    left: 1168px;
+}
+
+/* 온보딩 화면 4 작은 글씨 */
+.p3 {
+    color: #A1A1A1;
+    text-align: center;
+    font-family: Pretendard;
+    font-size: 17.5px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 26px;
+    letter-spacing: -0.5px;
+    position: relative; 
+    top: -1535px; 
+    left: 1168px;
+}
+
+
+/* 온보딩 화면 5 큰 글씨 */
+.h4 {
+    color: #000;
+    text-align: center;
+    font-family: Pretendard;
+    font-size: 29px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 37px; /* 127.586% */
+    letter-spacing: -0.725px;
+    position: relative; 
+    top: -2316px; 
+    left: 1558px;
+}
+
+/* 온보딩 화면 5 작은 글씨 */
+.p4 {
+    color: #A1A1A1;
+    text-align: center;
+    font-family: Pretendard;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 26px; /* 130% */
+    letter-spacing: -0.5px;
+    position: relative; 
+    top: -2348px; 
+    left: 1558px;
+}
+
+
+/* "이전", "다음" 버튼 위치 */
+.next,
+.past {
+    background-color: #ffffff;
+    border: none; 
+    outline: none; 
+}
+
+.next {
+    position: absolute; 
+    top: 414px; 
+    right: 15px; 
+    transform: translateY(-50%); 
+}
+
+.past {
+    position: absolute; 
+    top: 414px; 
+    left: 15px; 
+    transform: translateY(-50%); 
+}
+
+/* 슬라이드 네비게이션 */
+.dots-wrapper {
+    position: absolute; 
+    top: 50px; 
+    left: 175px; 
+    transform: translateX(-50%); 
+}
+
+ul, li {
+    list-style: none;
+}
+
+.dots {
+    width: 12px;
+    height: 12px;
+    background-color: #626877;
+    display: inline-block;
+    margin-left: 6px;
+    margin-right: 6px;
+    border-radius: 100px;
+    opacity: 0.9;
+}
+
+.dots.active {
+    background-image: url(onbodingimage_gif/active_dot_image.png); /* 활성화된 페이지에 바 이미지 추가 */
+    background-size: cover;
+    opacity: 0.9;
+}
